@@ -1,4 +1,4 @@
-# Cocktail Attack!
+# Cocktail Attack
 
 This pipeline aims to find repositioned drug combinations effective and selective against cancer cell using network perspectives.
 
