@@ -1,0 +1,53 @@
+#1	degradation	T
+#1	gene replacement	F
+#1	inhibition of synthesis	T
+#1	inhibits downstream inflammation cascades	F
+1	partial antagonist	T
+1	reducer	T
+#1	translocation inhibitor	T
+#2	disruptor	T
+2	inhibitory allosteric modulator	T
+2	weak inhibitor	T
+3	neutralizer	T
+3	suppressor	T
+4	adduct	T
+#4	antisense oligonucleotide	F
+4	inactivator	T
+#4	oxidizer	F
+5	component of	T
+7	metabolizer	F
+7	multitarget	F
+9	allosteric modulator	T
+9	binding	F
+#9	stabilization	F
+#14	regulator	F
+#16	downregulator	F
+16	inverse agonist	T
+16	stimulator	F
+17	chaperone	F
+17	cleavage	T
+17	intercalation	T
+19	unknown	T
+20	cross-linking/alkylation	T
+20	incorporation into and destabilization	T
+23	negative modulator	T
+29	blocker	T
+29	chelator	F
+41	other	T
+41	positive allosteric modulator	F
+41	product of	F
+67	modulator	T
+74	substrate	F
+75	antibody	T
+76	partial agonist	F
+79	other/unknown	T
+94	inducer	F
+96	potentiator	F
+158	activator	F
+174	cofactor	F
+391	binder	F
+409	ligand	F
+990	agonist	F
+1316	antagonist	T
+2036	Null	T
+2407	inhibitor	T

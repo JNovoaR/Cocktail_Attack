@@ -1,0 +1,15 @@
+drugbank_parser.py:
+
+Command-line arguments: python3 drugbank_parser.py drugbank_file.xml organism
+
+-'file.xml' must be Drug Bank xml format database (version 4.0).
+-'organism' can be 'all' to extract every targets from the database or it can be the name of a specific organism (such as 'human').  
+
+drugbank_parser.py extract the following atributes for each target of every drug of the indicated organism:
+('DrugID','DrugName','Approval','Action','TargetName','GenBankProtein','UniProtKB') 
+in 7 columns with TAB´s in between.
+
+Empty fields are filled with 'Null'. Also, for targets with no GenBankProtein ID o UniProtKB ID (such as non-protein targets),
+the output is 'Null'.
+
+No external libraries required.
