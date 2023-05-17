@@ -3,6 +3,7 @@ from statistics import mean
 import numpy as np
 from scipy import stats
 from scipy.stats import kstest
+import matplotlib.pyplot as plt
 ###python3 xxxx.py sorted_cocktails db_descriptions terms_to_search sample_size
 
 f_sorted_cocktails = sys.argv[1]
@@ -14,7 +15,7 @@ d_descriptions = {}
 with open(f_db_descriptions, "r") as f:
 	for line in f:
 			l_line = line.strip().split("\t")
-			d_descriptions[l_line[0]] = " ".join([l_line[1], l_line[2], l_line[3]])
+			d_descriptions[l_line[0]] = " ".join([l_line[1].lower(), l_line[2].lower(), l_line[3].lower()])
 
 	
 
@@ -25,7 +26,8 @@ def read_cofile (cofile):
 			if not line.startswith("Cocktail"):
 				l_line = line.strip().split("\t")
 				co = l_line[0]
-				co_list.append(co)
+				if co != "":
+					co_list.append(co)
 	return(co_list)
 
 
@@ -72,7 +74,13 @@ mean_matches_random = mean(l_n_matched_per_co_random)
 ks_test = stats.kstest(l_n_matched_per_co_biassed,l_n_matched_per_co_random)
 pvalue = ks_test[1]
 diff = mean_matches_biassed - mean_matches_random
-print("\t".join([f_sorted_cocktails, str(round(mean_matches_biassed, 5)), str(round(mean_matches_random, 5)), str(round(diff, 5)), str(pvalue)]))
+
+
+print(l_n_matched_per_co_random)
+plt.plot(range(0, len(l_n_matched_per_co_random)), l_n_matched_per_co_random, "o", color='black')
+#plt.plot(range(0, 1000), l_n_matched_per_co_random[0:1000], "o", color='black')
+plt.savefig('plot.png')
+#print("\t".join([f_sorted_cocktails, str(round(mean_matches_biassed, 5)), str(round(mean_matches_random, 5)), str(round(diff, 5)), str(pvalue)]))
 
 
 
