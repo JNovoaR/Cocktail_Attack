@@ -8,3 +8,6 @@ A detailed scheme of the workflow can be found at pipeline_scheme.html. It is re
 
 To construct a Biogrid interactome use biogrid_parser.py and human (9606) Biogrid database available here: https://downloads.thebiogrid.org/BioGRID/Release-Archive/BIOGRID-4.4.221/. This way you'll obtail a Biogrid generic interectome. Use this generic interactome and an Expression Atlas file (https://www.ebi.ac.uk/gxa/home) to obtain tissue/cell-line specific interactomes using EMBL_interactomes.py, by specifing the column number of the expression file you are interested in. The bash script take_all_interactomes.sh allows you to construct all the interactomes available for a given expression file.
 
+## 2. Constructing STRING interactomes.
+
+To construct a generic interactome with STRING interactions over 400/700/900 cut off, use filter_togenint_400_700_900.sh over human (9606) STRING database available at https://string-db.org/cgi/download. Then, translate the protein names to gene names IDs by using string_gene_translate.py. To use the generic interactome to construct tissue-specific or cell-sepecific interactomes, continue the steps described in the prior point.
