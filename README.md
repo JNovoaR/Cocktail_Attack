@@ -2,7 +2,7 @@
 
 This pipeline aims to find repositioned drug combinations effective and selective against cancer cell using network perspectives.
 
-A detailed scheme of the workflow can be found at pipeline_scheme.html. It is recommended to follow the scheme while going through this tutorial.
+A detailed scheme of the workflow can be found at pipeline_scheme.png. It is recommended to follow the scheme while going through this tutorial.
 
 ## 1. Constructing Biogrid interactomes.
 
