@@ -18,7 +18,7 @@ Use XML_drugbank_parser.py with DrugBank .xml file to obtain a list of drugs-tar
 
 ## 4. Select the 50 most relevant drugs for an specific cancer using IVI.
 
-Taking an interactome from a cancer cell line and another one for its corresponding tissue, use ivi.R on each of them to obtain the IVIV values of their proteins. Use both files and the "co1" file (from previous step) as input of ivi_targeting.py to obtain the differential of IVI values corresponding to each drug. Sort this file acording to this differential (sort -rnk 3) and take the 50 first drugs (head -50) to get the 50 most influencial drugs for this cancer according to IVI.
+Taking an interactome from a cancer cell line and another one for its corresponding tissue, use ivi.R on each of them to obtain the IVI values of their proteins. Use both files and the "co1" file (from previous step) as input of ivi_targeting.py to obtain the differential of IVI values corresponding to each drug. Sort this file acording to this differential (sort -rnk 3) and take the 50 first drugs (head -50) to get the 50 most influencial drugs for this cancer according to IVI.
 
 ## 5. Create al the cocktails possible of size n for an specific cancer.
 
